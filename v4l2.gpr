@@ -1,0 +1,30 @@
+
+--
+-- Project definition
+--
+
+with "florist.gpr";
+
+project visionposix is
+
+   for Source_Dirs use ("src","test");
+   -- Original
+   for Main use ("vision.adb");
+   for Object_Dir use "build";
+
+   package Linker is
+   end Linker;
+
+   package Builder is
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g","-gnat05");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-E", "-g");
+   end Binder;
+
+end visionposix;
+
