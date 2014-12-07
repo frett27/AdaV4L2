@@ -2,6 +2,7 @@
 --
 -- Project definition
 --
+--  pfreydiere - 2014
 
 with "florist.gpr";
 
