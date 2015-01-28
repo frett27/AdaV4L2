@@ -5,7 +5,9 @@ use Ada.Text_io;
 with Ada.Streams;
 use Ada.Streams;
 
-
+--
+-- test program, reading images from the camera
+--
 procedure Vision is 
 	H : V4L2.Handle := Open_Video;
 begin
